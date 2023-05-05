@@ -1,0 +1,5 @@
+res://TestStairs.tscn
+res://addons/qodot/game_definitions/fgd/solid_classes/rotate_solid_class.tres
+res://addons/qodot/game_definitions/fgd/point_classes/physics_ball_point_class.tres
+res://test2.tscn
+res://Player/Player.gd
