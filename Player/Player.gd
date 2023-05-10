@@ -87,6 +87,7 @@ func params(transform3d, motion):
 	var params : PhysicsTestMotionParameters3D = PhysicsTestMotionParameters3D.new()
 	params.from = transform3d
 	params.motion = motion
+	params.recovery_as_collision = true
 	return params
 
 func _physics_process(delta):
@@ -187,7 +188,7 @@ func _physics_process(delta):
 		var transform3d: Transform3D = global_transform
 		var motion: Vector3 = velocity * delta
 		var is_player_collided: bool = PhysicsServer3D.body_test_motion(self.get_rid(), params(transform3d, motion), test_motion_result)
-			
+		
 		if not is_player_collided:
 			transform3d.origin += motion
 			motion = -step_height
